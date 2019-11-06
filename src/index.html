@@ -20,7 +20,7 @@
 <body>
     <app-root></app-root>
     <button id="btn" onclick="ShowBtn();">Hello, world!</button>
-    <div id="HostDiv"></div>
+    <div id="HostDiv"><span>The DIV</span></div>
     <template>
             <style>
             h3 {
@@ -32,7 +32,7 @@
             padding-left:10px;
             }
             </style>
-            <h3>From the Shadows... </h3>
+            <h3>Courtesy of the shadow host <content select="span"></content></h3>
             </template>
     <script>
         var ShadowHost = document.querySelector('button');
