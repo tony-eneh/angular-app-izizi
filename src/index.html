@@ -1,14 +1,41 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>AngularAppIzizi</title>
-  <base href="/">
 
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+<head>
+    <meta charset="utf-8">
+    <title>AngularAppIzizi</title>
+    <base href="/">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
+
+<!-- <body>
+    <div>
+        <h3>Am a h3 heading...</h3>
+        <button>Click me or not!</button>
+    </div>
+</body> -->
+
 <body>
-  <app-root></app-root>
+    <app-root></app-root>
+    <button id="btn" onclick="ShowBtn();">Hello, world!</button>
+    <script>
+        var ShadowHost = document.querySelector('button');
+        if (ShadowHost.shadowRoot == null) {
+            var ShadowRoot = ShadowHost.createShadowRoot();
+            ShadowRoot.innerHTML = "Hello from Angular";
+        }
+    </script>
+    <script>
+        function ShowBtn() {
+            theBtn = document.getElementById("btn").innerHTML;
+            alert(theBtn);
+        }
+    </script>
 </body>
+
+<script>
+</script>
+
 </html>
