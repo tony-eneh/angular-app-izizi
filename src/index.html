@@ -20,6 +20,20 @@
 <body>
     <app-root></app-root>
     <button id="btn" onclick="ShowBtn();">Hello, world!</button>
+    <div id="HostDiv"></div>
+    <template>
+            <style>
+            h3 {
+            color: darkblue;
+            border:2px solid gray;
+            box-shadow: 10px 10px 5px #0f0f0f;
+            width:20%;
+            margin-left:20px;
+            padding-left:10px;
+            }
+            </style>
+            <h3>From the Shadows... </h3>
+            </template>
     <script>
         var ShadowHost = document.querySelector('button');
         if (ShadowHost.shadowRoot == null) {
@@ -31,6 +45,16 @@
         function ShowBtn() {
             theBtn = document.getElementById("btn").innerHTML;
             alert(theBtn);
+        }
+    </script>
+    <script>
+        var ShadowHost = document.getElementById('HostDiv');
+        if (ShadowHost.shadowRoot == null) // See if the element has a shadow root?
+        {
+            var ShadowRoot = ShadowHost.createShadowRoot();
+            // Get the template
+            var tmpl = document.querySelector('template');
+            ShadowRoot.appendChild(document.importNode(tmpl.content, true));
         }
     </script>
 </body>
