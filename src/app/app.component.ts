@@ -7,4 +7,17 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-app-izizi';
+  products = [
+    {
+      name: "banana",
+      description: "Sweet and lovely fruit",
+    },
+    {
+      name: "coconut",
+      description:"yeah some people's head is like me",
+    },
+    {
+      name: "pawpaw",
+    },
+];
 }
