@@ -8,6 +8,11 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
+
+
 </head>
 
 <!-- <body>
@@ -19,23 +24,23 @@
 
 <body>
     <app-root></app-root>
-    <button id="btn" onclick="ShowBtn();">Hello, world!</button>
+    <button id="btn" onclick="ShowBtn();" class="btn btn-success">Hello, world!</button>
     <div id="HostDiv"><span>The DIV</span></div>
     <template>
-            <style>
+        <style>
             h3 {
-            color: darkblue;
-            border:2px solid gray;
-            box-shadow: 10px 10px 5px #0f0f0f;
-            width:20%;
-            margin-left:20px;
-            padding-left:10px;
+              color: darkblue;
+              border:2px solid gray;
+              box-shadow: 10px 10px 5px #0f0f0f;
+              width:20%;
+              margin-left:20px;
+              padding-left:10px;
             }
-            </style>
-            <h3>Courtesy of the shadow host <content select="span"></content></h3>
-            </template>
+        </style>
+      <h3>Courtesy of the shadow host <content select="span"></content></h3>
+    </template>
     <script>
-        var ShadowHost = document.querySelector('button');
+        var ShadowHost = document.getElementById("btn");
         if (ShadowHost.shadowRoot == null) {
             var ShadowRoot = ShadowHost.createShadowRoot();
             ShadowRoot.innerHTML = "Hello from Angular";

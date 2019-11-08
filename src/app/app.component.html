@@ -22,6 +22,14 @@
 
 </div>
 
+<div class="container" [ngSwitch]="CurrentRole">
+  <div *ngSwitchCase=10>Head Referee</div>
+  <div *ngSwitchCase=20>Referee</div>
+  <div *ngSwitchCase=30>Scorekeeper</div>
+  <div *ngSwitchCase=40>Admin</div>
+  <div *ngSwitchDefault>End User</div>
+</div>
+
 <script>
 // add products model here for starters
 

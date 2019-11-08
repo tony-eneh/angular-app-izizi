@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-app-izizi';
+
   products = [
     {
       name: "banana",
@@ -19,5 +20,12 @@ export class AppComponent {
     {
       name: "pawpaw",
     },
-];
+  ];
+
+  set ewoo(value: string){};
+
+  get ewoo(): string {return ""};
+
+  CurrentRole: number = 10; /*used to test a switch statement directive in the template*/
+
 }
