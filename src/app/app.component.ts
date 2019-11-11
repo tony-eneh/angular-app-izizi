@@ -32,4 +32,6 @@ export class AppComponent {
 
   shouldBeBothered = true;
 
+  ahaMmadu= 'nsibull';
+
 }
