@@ -28,6 +28,6 @@ export class AppComponent {
 
   CurrentRole: number = 10; /*used to test a switch statement directive in the template*/
 
-  darkTheme = ()=>{return 'dark-theme'}
+  darkTheme = _ => 'dark-theme';
 
 }
