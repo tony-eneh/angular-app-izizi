@@ -22,7 +22,7 @@
 
 </div>
 
-<div class="container" [ngSwitch]="CurrentRole">
+<div class="container" [ngSwitch]="CurrentRole" [class.border]="shouldBeBothered">
   <div *ngSwitchCase=10>Head Referee</div>
   <div *ngSwitchCase=20>Referee</div>
   <div *ngSwitchCase=30>Scorekeeper</div>

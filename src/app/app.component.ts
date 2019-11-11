@@ -30,4 +30,6 @@ export class AppComponent {
 
   darkTheme = _ => 'dark-theme';
 
+  shouldBeBothered = true;
+
 }
